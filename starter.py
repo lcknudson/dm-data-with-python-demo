@@ -60,7 +60,7 @@
 
 open_file = open("FinalGrades.csv")
 
-print(open_file)
+# print(open_file)
 
 # Counter Variables.
 total_a = 0  
@@ -83,6 +83,14 @@ for line in open_file:
 print("A's:", total_a)
 print("B's:", total_b)
 print("Cs:", total_c)
+
+open_file.seek(0)
+# open_file = open("FinalGrades.csv")
+
+for line in open_file:
+    line = line.strip()
+    values = line.split(",")
+    print(values[2: 5])
 
 open_file.close()
         
